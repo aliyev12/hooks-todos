@@ -13,13 +13,7 @@ function TodoList() {
         <List>
           {todos.map((todo, i) => (
             <React.Fragment key={i}>
-              <Todo
-                // task={todo.task}
-                // completed={todo.completed}
-                // id={todo.id}
-                {...todo}
-                key={todo.id}
-              />
+              <Todo {...todo} key={todo.id} />
               {i < todos.length - 1 && <Divider />}
             </React.Fragment>
           ))}
