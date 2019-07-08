@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import TextField from "@material-ui/core/TextField";
 import useInputState from "./hooks/useInputState";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
 import Cancel from "@material-ui/icons/Cancel";
 import Save from "@material-ui/icons/Save";
+import { TodosContext } from "./contexts/todos.context";
 
-function EditTodoForm({ id, editTodo, task, toggleEditForm }) {
+function EditTodoForm({ id, task, toggleEditForm }) {
+  const { editTodo } = useContext(TodosContext);
   const [value, handleChange, reset] = useInputState(task);
   const handleSave = e => {
     e.preventDefault();
