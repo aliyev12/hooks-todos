@@ -16,7 +16,6 @@ export const TodosProvider = ({ children }) => {
     defaultTodos,
     todoReducer
   );
-  console.log("todos = ", todos);
   return (
     <TodosContext.Provider value={todos}>
       <DispatchContext.Provider value={dispatch}>

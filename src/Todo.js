@@ -13,7 +13,6 @@ import { DispatchContext } from "./contexts/todos.context";
 const Todo = ({ task, completed, id }) => {
   const dispatch = useContext(DispatchContext);
   const [isEditing, toggle] = useToggleState(false);
-  console.log(task);
   return (
     <ListItem style={{ height: "64px" }}>
       {isEditing ? (
